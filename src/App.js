@@ -1,8 +1,20 @@
-// const URL = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=${process.env.REACT_APP_API_KEY}`;
-const URL = `https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=fe401b4fb11016097b8ab6892da9c0a4;`;
+import axios from 'axios';
+
+const searchCity = (city) => {
+  axios
+    .get(
+      `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=fe401b4fb11016097b8ab6892da9c0a4`
+    )
+    .then((res) => {
+      console.log(res.data);
+    });
+};
+
+const citiesArray = ['Fuzhou', 'Hong Kong', 'New York'];
+
+citiesArray.forEach(searchCity);
 
 function App() {
-  console.log('the url is:', URL);
   return (
     <div className="app">
       <div className="city">

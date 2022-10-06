@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Modal from './Modal';
+import styles from './styles/city.module.css';
 
 const City = ({ name }) => {
   const [city, setCity] = useState(null);
@@ -35,8 +36,7 @@ const City = ({ name }) => {
         {city ? (
           <div>
             <img
-              style={{ maxWidth: 200 }}
-              className="city__image"
+              className={styles.city__image}
               alt={city.name}
               src={require(`./images/${city.name}.jpg`)}
             />

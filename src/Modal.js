@@ -1,10 +1,11 @@
+import styles from './styles/modal.module.css';
+
 const Modal = ({ closeModal, data }) => {
-  console.log('data', data);
   const weather = data.weather[0];
 
   return (
-    <div className="modal">
-      <button className="btn btn--close" onClick={() => closeModal()}>
+    <div className={styles.modal}>
+      <button className={styles.btn__close} onClick={closeModal}>
         X
       </button>
       <h2>{data.name}</h2>

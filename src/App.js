@@ -3,8 +3,7 @@ import axios from 'axios';
 import City from './City';
 import Modal from './Modal';
 import styles from './styles/app.module.css';
-
-const cities = ['Fuzhou, CN', 'Hong Kong, CN', 'New York, US'];
+import cities from './cities.js';
 
 function App() {
   const [citiesWeather, setCitiesWeather] = useState(null);

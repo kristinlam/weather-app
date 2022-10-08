@@ -3,6 +3,7 @@ import axios from 'axios';
 import City from './City';
 import Modal from './Modal';
 import styles from './styles/app.module.css';
+import modalStyles from './styles/modal.module.css';
 import cities from './cities.js';
 
 function App() {
@@ -47,9 +48,9 @@ function App() {
         ))}
       </div>
       {modal.show && modal.data && (
-        <div>
+        <div className={modalStyles.container}>
           <Modal closeModal={closeModal} data={modal.data} />
-          <div className={styles.overlay} onClick={closeModal}></div>
+          <div className={modalStyles.overlay} onClick={closeModal}></div>
         </div>
       )}
     </div>

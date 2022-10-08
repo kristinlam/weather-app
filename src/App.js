@@ -40,7 +40,13 @@ function App() {
     <div className={styles.app}>
       <div className={styles.heading}>
         <h1 className={styles.title}>Weather App</h1>
-        <h1 className={styles.subtitle}>Short description to go here</h1>
+        <div className={styles.description}>
+          <p>Today's weather for the top 10 most visited cities</p>
+          <p>
+            Weather data from OpenWeatherMap API, city data from Bloomberg, and
+            photos from Unsplash
+          </p>
+        </div>
       </div>
       <div className={styles.home}>
         {citiesWeather?.map((el, idx) => (

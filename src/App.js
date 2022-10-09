@@ -14,7 +14,7 @@ function App() {
     const getWeatherData = () => {
       let promises = cities.map((city) =>
         axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fe401b4fb11016097b8ab6892da9c0a4&units=imperial`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=fe401b4fb11016097b8ab6892da9c0a4&units=imperial`
         )
       );
 
@@ -28,12 +28,12 @@ function App() {
     getWeatherData();
   }, []);
 
-  const openModal = (idx) => {
-    setModal({ show: true, data: citiesWeather[idx] });
+  const openModal = (index) => {
+    setModal({ show: true, index: index, data: citiesWeather[index] });
   };
 
   const closeModal = () => {
-    setModal({ show: false, data: null });
+    setModal({ show: false, index: null, data: null });
   };
 
   return (
@@ -49,13 +49,17 @@ function App() {
         </div>
       </div>
       <div className={styles.home}>
-        {citiesWeather?.map((el, idx) => (
-          <CityCard data={el} key={idx} idx={idx} openModal={openModal} />
+        {citiesWeather?.map((el, i) => (
+          <CityCard key={i} index={i} data={el} openModal={openModal} />
         ))}
       </div>
       {modal.show && modal.data && (
         <div className={modalStyles.container}>
-          <CityModal closeModal={closeModal} data={modal.data} />
+          <CityModal
+            index={modal.index}
+            data={modal.data}
+            closeModal={closeModal}
+          />
           <div className={modalStyles.overlay} onClick={closeModal}></div>
         </div>
       )}

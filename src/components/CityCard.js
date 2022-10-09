@@ -1,13 +1,14 @@
 import styles from '../styles/city.module.css';
 import { roundOneDecimalPoint } from '../helpers';
+import cities from '../cities.js';
 
-const CityCard = ({ openModal, idx, data }) => {
+const CityCard = ({ index, data, openModal }) => {
   return (
-    <div className={styles.city} onClick={() => openModal(idx)}>
+    <div className={styles.city} onClick={() => openModal(index)}>
       <img
         className={styles.city__image}
         alt={data.name}
-        src={require(`../images/${data.name}.jpg`)}
+        src={require(`../images/${cities[index].imageFile}`)}
       />
       <div className={styles.city__info}>
         <p className={styles.city__info__temp}>

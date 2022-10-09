@@ -3,7 +3,7 @@ import axios from 'axios';
 import CityCard from './components/CityCard';
 import CityModal from './components/CityModal';
 import styles from './styles/app.module.css';
-import modalStyles from './styles/modal.module.css';
+import modalStyles from './styles/CityModal.module.css';
 import cities from './cities.js';
 
 function App() {

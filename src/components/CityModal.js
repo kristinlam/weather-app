@@ -1,4 +1,4 @@
-import styles from '../styles/modal.module.css';
+import styles from '../styles/CityModal.module.css';
 import { captializeFirstLetter, roundOneDecimalPoint } from '../helpers';
 import cities from '../cities.js';
 

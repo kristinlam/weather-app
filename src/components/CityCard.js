@@ -1,4 +1,4 @@
-import styles from '../styles/city.module.css';
+import styles from '../styles/CityCard.module.css';
 import { roundOneDecimalPoint } from '../helpers';
 import cities from '../cities.js';
 

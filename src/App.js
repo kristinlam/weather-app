@@ -14,7 +14,7 @@ function App() {
     const getWeatherData = () => {
       let promises = cities.map((city) =>
         axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=fe401b4fb11016097b8ab6892da9c0a4&units=imperial`
+          `https://api.openweathermap.org/data/2.5/weather?q=${city.name}&appid=${process.env.REACT_APP_API_KEY}&units=imperial`
         )
       );
 

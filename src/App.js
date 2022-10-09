@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import City from './City';
-import Modal from './Modal';
+import CityCard from './CityCard';
+import CityModal from './CityModal';
 import styles from './styles/app.module.css';
 import modalStyles from './styles/modal.module.css';
 import cities from './cities.js';
@@ -50,12 +50,12 @@ function App() {
       </div>
       <div className={styles.home}>
         {citiesWeather?.map((el, idx) => (
-          <City data={el} key={idx} idx={idx} openModal={openModal} />
+          <CityCard data={el} key={idx} idx={idx} openModal={openModal} />
         ))}
       </div>
       {modal.show && modal.data && (
         <div className={modalStyles.container}>
-          <Modal closeModal={closeModal} data={modal.data} />
+          <CityModal closeModal={closeModal} data={modal.data} />
           <div className={modalStyles.overlay} onClick={closeModal}></div>
         </div>
       )}

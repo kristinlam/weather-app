@@ -1,7 +1,7 @@
 import styles from './styles/modal.module.css';
 import { captializeFirstLetter, roundOneDecimalPoint } from './helpers';
 
-const Modal = ({ closeModal, data }) => {
+const CityModal = ({ closeModal, data }) => {
   return (
     <div className={`${styles.modal} ${styles.row}`}>
       <div className={`${styles.image__container} ${styles.column}`}>
@@ -44,4 +44,4 @@ const Modal = ({ closeModal, data }) => {
   );
 };
 
-export default Modal;
+export default CityModal;

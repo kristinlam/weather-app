@@ -1,7 +1,7 @@
 import styles from './styles/city.module.css';
 import { roundOneDecimalPoint } from './helpers';
 
-const City = ({ openModal, idx, data }) => {
+const CityCard = ({ openModal, idx, data }) => {
   return (
     <div className={styles.city} onClick={() => openModal(idx)}>
       <img
@@ -19,4 +19,4 @@ const City = ({ openModal, idx, data }) => {
   );
 };
 
-export default City;
+export default CityCard;

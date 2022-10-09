@@ -1,11 +1,11 @@
-import styles from './styles/modal.module.css';
-import { captializeFirstLetter, roundOneDecimalPoint } from './helpers';
+import styles from '../styles/modal.module.css';
+import { captializeFirstLetter, roundOneDecimalPoint } from '../helpers';
 
 const CityModal = ({ closeModal, data }) => {
   return (
     <div className={`${styles.modal} ${styles.row}`}>
       <div className={`${styles.image__container} ${styles.column}`}>
-        <img alt={data.name} src={require(`./images/${data.name}.jpg`)} />
+        <img alt={data.name} src={require(`../images/${data.name}.jpg`)} />
         <a href="https://unsplash.com/@guphotos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
           Thana Gu
         </a>

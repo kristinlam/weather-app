@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import CityCard from './CityCard';
-import CityModal from './CityModal';
+import CityCard from './components/CityCard';
+import CityModal from './components/CityModal';
 import styles from './styles/app.module.css';
 import modalStyles from './styles/modal.module.css';
 import cities from './cities.js';

@@ -1,5 +1,5 @@
-import styles from './styles/city.module.css';
-import { roundOneDecimalPoint } from './helpers';
+import styles from '../styles/city.module.css';
+import { roundOneDecimalPoint } from '../helpers';
 
 const CityCard = ({ openModal, idx, data }) => {
   return (
@@ -7,7 +7,7 @@ const CityCard = ({ openModal, idx, data }) => {
       <img
         className={styles.city__image}
         alt={data.name}
-        src={require(`./images/${data.name}.jpg`)}
+        src={require(`../images/${data.name}.jpg`)}
       />
       <div className={styles.city__info}>
         <p className={styles.city__info__temp}>

@@ -1,4 +1,5 @@
 import styles from './styles/city.module.css';
+import { roundOneDecimalPoint } from './helpers';
 
 const City = ({ openModal, idx, data }) => {
   return (
@@ -10,7 +11,7 @@ const City = ({ openModal, idx, data }) => {
       />
       <div className={styles.city__info}>
         <p className={styles.city__info__temp}>
-          {Math.round(data.main.temp * 10) / 10}°F
+          {roundOneDecimalPoint(data.main.temp)}°F
         </p>
         <h2 className={styles.city__info__name}>{data.name}</h2>
       </div>

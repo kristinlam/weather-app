@@ -1,8 +1,7 @@
 import styles from './styles/modal.module.css';
+import { captializeFirstLetter, roundOneDecimalPoint } from './helpers';
 
 const Modal = ({ closeModal, data }) => {
-  const weather = data.weather[0];
-
   return (
     <div className={`${styles.modal} ${styles.row}`}>
       <div className={`${styles.image__container} ${styles.column}`}>
@@ -19,12 +18,8 @@ const Modal = ({ closeModal, data }) => {
         <div className={styles.weather}>
           <h2>{data.name}</h2>
           <div>
-            <p>
-              {weather.description.charAt(0).toUpperCase() +
-                weather.description.slice(1)}
-            </p>
-
-            <p>{Math.round(data.main.temp * 10) / 10}°F</p>
+            <p>{captializeFirstLetter(data.weather[0].description)}</p>
+            <p>{roundOneDecimalPoint(data.main.temp)}°F</p>
           </div>
 
           <div>

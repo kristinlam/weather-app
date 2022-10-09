@@ -10,8 +10,29 @@ html {
 }
 
 body {
-  font: 1rem 'Manrope', Arial, sans-serif;
+  font: 1rem 'DM Sans', Arial, sans-serif;
   line-height: 1.5;
   color: #333;
   background-color: #121212;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cormorant', 'Palatino', serif;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.369rem;
 }

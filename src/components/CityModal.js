@@ -7,36 +7,39 @@ const CityModal = ({ index, data, closeModal }) => {
 
   return (
     <div className={`${styles.modal} ${styles.row}`}>
-      <div className={`${styles.imageContainer} ${styles.column}`}>
+      <div className={styles.imageColumn}>
         <img
           alt={data.name}
           src={require(`../images/${selectedCity.imageFile}`)}
         />
       </div>
-      <div className={`${styles.textContainer} ${styles.column}`}>
+      <div className={styles.textColumn}>
         <button className={styles.btnClose} onClick={closeModal}>
           X
         </button>
 
+        <h2 className={styles.heading}>{data.name}</h2>
+
         <div className={styles.weatherInfo}>
-          <h2>{data.name}</h2>
-          <div>
+          <div className={styles.featured}>
             <p>{captializeFirstLetter(data.weather[0].description)}</p>
-            <p>{roundOneDecimalPoint(data.main.temp)}°F</p>
+            <p className={styles.temp}>
+              {roundOneDecimalPoint(data.main.temp)}°F
+            </p>
           </div>
 
-          <div>
-            <div>
+          <div className={styles.stats}>
+            <div className={styles.stat}>
               <h4>Atmospheric pressure</h4>
               <p>{data.main.pressure.toLocaleString('en-US')} hPa</p>
             </div>
 
-            <div>
+            <div className={styles.stat}>
               <h4>Humidity</h4>
               <p>{data.main.humidity}%</p>
             </div>
 
-            <div>
+            <div className={styles.stat}>
               <h4>Visibility</h4>
               <p>{data.visibility.toLocaleString('en-US')} m</p>
             </div>
@@ -44,14 +47,18 @@ const CityModal = ({ index, data, closeModal }) => {
         </div>
 
         <div className={styles.photoInfo}>
-          <hr />
-          <p>{selectedCity.photoDescription}</p>
+          <p className={styles.photoDescription}>
+            {selectedCity.photoDescription}
+          </p>
           <p>
-            Photo by{' '}
+            <a target="_blank" rel="noreferrer" href={selectedCity.photoURL}>
+              Photo
+            </a>{' '}
+            by{' '}
             <a
               target="_blank"
               rel="noreferrer"
-              href={`https://unsplash.com/${selectedCity.photographerHandle}`}
+              href={selectedCity.photographerURL}
             >
               {selectedCity.photographer}
             </a>

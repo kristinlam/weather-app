@@ -7,7 +7,7 @@
 
 .cityImage {
   width: 100%;
-  height: auto;
+  height: 100%;
   filter: opacity(70%) blur(1px);
   transition: transform 1.4s;
 }

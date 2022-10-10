@@ -4,17 +4,35 @@ function App() {
   return (
     <div className="app">
       <div className="heading">
-        <h1 className="title">Weather App</h1>
-        <div className="description">
-          <p>Today's weather for the top 10 most visited cities</p>
-          <p>
-            Weather data from OpenWeatherMap API, city data from Bloomberg, and
-            photos from Unsplash
-          </p>
-        </div>
+        <h1 className="title">Weatherful</h1>
+        <h2 className="subtitle">
+          A weather dashboard for the ten most visited cities
+        </h2>
       </div>
 
       <Dashboard />
+      <div className="sources">
+        <p>
+          Weather data from{' '}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://openweathermap.org/"
+          >
+            OpenWeatherMap
+          </a>
+        </p>
+        <p>
+          City rankings from{' '}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.bloomberg.com/news/articles/2019-12-03/these-are-the-world-s-most-popular-city-destinations-in-2019"
+          >
+            Bloomberg
+          </a>
+        </p>
+      </div>
     </div>
   );
 }

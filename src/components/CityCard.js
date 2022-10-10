@@ -6,15 +6,15 @@ const CityCard = ({ index, data, openModal }) => {
   return (
     <div className={styles.city} onClick={() => openModal(index)}>
       <img
-        className={styles.city__image}
+        className={styles.cityImage}
         alt={data.name}
         src={require(`../images/${cities[index].imageFile}`)}
       />
-      <div className={styles.city__info}>
-        <p className={styles.city__info__temp}>
+      <div className={styles.cityInfo}>
+        <p className={styles.cityInfoTemp}>
           {roundOneDecimalPoint(data.main.temp)}°F
         </p>
-        <h2 className={styles.city__info__name}>{data.name}</h2>
+        <h2 className={styles.cityInfoName}>{data.name}</h2>
       </div>
     </div>
   );

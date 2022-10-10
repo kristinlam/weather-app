@@ -7,14 +7,14 @@ const CityModal = ({ index, data, closeModal }) => {
 
   return (
     <div className={`${styles.modal} ${styles.row}`}>
-      <div className={`${styles.image__container} ${styles.column}`}>
+      <div className={`${styles.imageContainer} ${styles.column}`}>
         <img
           alt={data.name}
           src={require(`../images/${selectedCity.imageFile}`)}
         />
       </div>
-      <div className={`${styles.text__container} ${styles.column}`}>
-        <button className={styles.btn__close} onClick={closeModal}>
+      <div className={`${styles.textContainer} ${styles.column}`}>
+        <button className={styles.btnClose} onClick={closeModal}>
           X
         </button>
 

@@ -1,4 +1,4 @@
-# Weatherful
+# Weatherlust
 
 A weather dashboard for the top 10 most visited cities in the world, created with [Create React App](https://github.com/facebook/create-react-app) and [OpenWeatherMap API](https://openweathermap.org/).
 

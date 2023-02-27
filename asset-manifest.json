@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/weatherlust/static/css/main.21aa77c9.css",
-    "main.js": "/weatherlust/static/js/main.7550cb52.js",
+    "main.css": "/weatherlust/static/css/main.7f801550.css",
+    "main.js": "/weatherlust/static/js/main.b2c597b8.js",
     "static/media/readme.png": "/weatherlust/static/media/readme.51ae557dea04eb27c59f.png",
     "static/media/kualalumpur.jpg": "/weatherlust/static/media/kualalumpur.a397437ec5babee26904.jpg",
     "static/media/singapore.jpg": "/weatherlust/static/media/singapore.f58c1012f1f9571d8a03.jpg",
@@ -14,11 +14,11 @@
     "static/media/istanbul.jpg": "/weatherlust/static/media/istanbul.40a170325869533a4b87.jpg",
     "static/media/paris.jpg": "/weatherlust/static/media/paris.81f3e4527a55968b982b.jpg",
     "index.html": "/weatherlust/index.html",
-    "main.21aa77c9.css.map": "/weatherlust/static/css/main.21aa77c9.css.map",
-    "main.7550cb52.js.map": "/weatherlust/static/js/main.7550cb52.js.map"
+    "main.7f801550.css.map": "/weatherlust/static/css/main.7f801550.css.map",
+    "main.b2c597b8.js.map": "/weatherlust/static/js/main.b2c597b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.21aa77c9.css",
-    "static/js/main.7550cb52.js"
+    "static/css/main.7f801550.css",
+    "static/js/main.b2c597b8.js"
   ]
 }

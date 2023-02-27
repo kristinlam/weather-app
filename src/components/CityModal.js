@@ -1,8 +1,17 @@
+import { useEffect } from 'react';
 import styles from '../styles/CityModal.module.css';
 import { captializeFirstLetter, roundOneDecimalPoint } from '../helpers';
 import cities from '../cities.js';
 
 const CityModal = ({ index, data, closeModal }) => {
+  useEffect(() => {
+    document.body.classList.add('overflow-hidden');
+
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []);
+
   const selectedCity = cities[index];
 
   return (

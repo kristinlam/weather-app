@@ -8,7 +8,7 @@ import cities from '../cities.js';
 
 const Dashboard = () => {
   const [citiesWeather, setCitiesWeather] = useState(null);
-  const [modal, setModal] = useState({ show: false, data: null });
+  const [modal, setModal] = useState({ index: null, data: null });
 
   useEffect(() => {
     const getWeatherData = () => {
@@ -29,21 +29,21 @@ const Dashboard = () => {
   }, []);
 
   const openModal = (index) => {
-    setModal({ show: true, index: index, data: citiesWeather[index] });
+    setModal({ index, data: citiesWeather[index] });
   };
 
   const closeModal = () => {
-    setModal({ show: false, index: null, data: null });
+    setModal({ index: null, data: null });
   };
 
   return (
     <div>
       <div className={styles.dashboard}>
         {citiesWeather?.map((el, i) => (
-          <CityCard key={i} index={i} data={el} openModal={openModal} />
+          <CityCard key={el.name} index={i} data={el} openModal={openModal} />
         ))}
       </div>
-      {modal.show && modal.data && (
+      {modal.data && (
         <div className={modalStyles.container}>
           <CityModal
             index={modal.index}
